@@ -7,8 +7,7 @@ public class PracticeProblems {
         Occurances++;
         }
         return Occurances;
-}
-
+    }
     //question 2
     public static int[] reverseArray(int[] arr) {
         int[] reversed = new int[arr.length];
@@ -17,11 +16,17 @@ public class PracticeProblems {
         }
     return reversed;
     }
-    public static void main(int[] args) {
-    int[] arr = {7, 1, 594, 3, 1482, 19, 12, 3};
-    int[] result = reverseArray(arr);
-    for (int r = 0; r < result.length; r++)
-    System.out.print(result[r]);
+    //question 3
+    public static double sumGrid(double[][] grid) {
+        double sum = 0.0;
+        for (int l = 0; l < grid.length; l++) {
+            for (int w = 0; w < grid[l].length; w++) {
+            sum = grid[l][w];
+            } 
+        }
+        return sum;
     }
+
+
 
 }
