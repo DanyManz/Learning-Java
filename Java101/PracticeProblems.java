@@ -21,7 +21,7 @@ public class PracticeProblems {
         double sum = 0.0;
         for (int l = 0; l < grid.length; l++) {
             for (int w = 0; w < grid[l].length; w++) {
-            sum = grid[l][w];
+            sum += grid[l][w];
             } 
         }
         return sum;
