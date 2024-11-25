@@ -17,3 +17,19 @@ Test code for "Practice: Angle"
 Point p = new Point(10, -10);
 System.out.println("Angle of point P in degrees is " + p.angle());
 ```
+Test code for "Practice: Diagonal"
+```java
+        Grid<Integer> grid = new Grid<>(3,0);
+        grid.set(0, 0, 1);
+        grid.set(0, 1, 90);
+        grid.set(0, 2, 375); 
+        grid.set(1, 0, 947);
+        grid.set(1, 1, 2);
+        grid.set(1, 2, 3964);
+        grid.set(2, 0, 430);
+        grid.set(2, 1, 1253);
+        grid.set(2, 2, 3);
+        
+        ArrayList<Integer> diagonal = grid.diagonal();
+        System.out.println(diagonal);  
+```
