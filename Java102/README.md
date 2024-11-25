@@ -33,3 +33,9 @@ Test code for "Practice: Diagonal"
         ArrayList<Integer> diagonal = grid.diagonal();
         System.out.println(diagonal);  
 ```
+Test code for "Practice: maxSideLength
+```java
+Grid<Integer> grid1 = new Grid<Integer>(5, null);
+        Grid<Integer> grid2 = new Grid<Integer>(30, null);
+        Grid<Integer> grid3 = new Grid<Integer>(10, null);
+        System.out.println("Max Side Length: " + Grid.maxSideLength()); ```

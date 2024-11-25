@@ -5,6 +5,10 @@ public class Grid<T> {
 
 	public Grid(int sideLength, T defaultVal) {
 		this.sideLength = sideLength;
+		//lines 9-11 for practice: maxSideLength
+		if(maxSideLength<sideLength) {
+        maxSideLength = sideLength;
+		 }
 		this.grid = new ArrayList<ArrayList<T>>(sideLength);
 		for (int i = 0; i < sideLength; i++) {
 			grid.add(new ArrayList<>(sideLength));
@@ -36,9 +40,8 @@ public class Grid<T> {
             str += arr[i] + ", ";
         }
         return str + arr[arr.length - 1] + "]";
+    }
 
-    
-}
 //Practice: Diagonal
     public ArrayList<T> diagonal() {
         ArrayList<T> primaryDiagonal = new ArrayList<>();
@@ -48,14 +51,8 @@ public class Grid<T> {
         return primaryDiagonal;
     }
 //Practice: maxSideLength
-
-    private T[][] grid2;
-    public static int maxSideLength = 0;
-
-    public static int maxSideLength() {
-        return maxSideLength;
-    } 
-    if(maxSideLength<sideLength) {
-        maxSideLength=sideLength;
-    }
-}}
+    private	static int maxSideLength = 0;
+	public static int maxSideLength() {
+		return maxSideLength;
+	}
+}
