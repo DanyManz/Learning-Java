@@ -47,6 +47,15 @@ public class Grid<T> {
         }
         return primaryDiagonal;
     }
-}
+//Practice: maxSideLength
 
+    private T[][] grid2;
+    public static int maxSideLength = 0;
 
+    public static int maxSideLength() {
+        return maxSideLength;
+    } 
+    if(maxSideLength<sideLength) {
+        maxSideLength=sideLength;
+    }
+}}
