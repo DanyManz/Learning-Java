@@ -1,5 +1,4 @@
 public class Circle implements Main.Shape {
-	
     public final Point center;
 	public final double radius;
 

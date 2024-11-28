@@ -33,9 +33,21 @@ Test code for "Practice: Diagonal"
         ArrayList<Integer> diagonal = grid.diagonal();
         System.out.println(diagonal);  
 ```
-Test code for "Practice: maxSideLength
+Test code for "Practice: maxSideLength"
 ```java
 Grid<Integer> grid1 = new Grid<Integer>(5, null);
         Grid<Integer> grid2 = new Grid<Integer>(30, null);
         Grid<Integer> grid3 = new Grid<Integer>(10, null);
-        System.out.println("Max Side Length: " + Grid.maxSideLength()); ```
+        System.out.println("Max Side Length: " + Grid.maxSideLength());
+```
+Test code for "Practice: fromPoints" (I don't really like how I did with this problem)
+```java
+      Point p1 = new Point(10, 0);
+      Point p2 = new Point(0, 5);
+      Point p3 = new Point(0, 15);
+        Circle circle = Circle.fromPoints(p1, p2, p3);
+        System.out.println("New circle center point: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
+        System.out.println("New circle radius: " + circle.getRadius());
+
+```
+

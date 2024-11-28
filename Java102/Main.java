@@ -42,13 +42,22 @@ public class Main {
         return scaled;
     }
     public static void main(String[] args) {
-      Point p1 = new Point(10, 0);
-      Point p2 = new Point(0, 5);
-      Point p3 = new Point(0, 15);
-        Circle circle = Circle.fromPoints(p1, p2, p3);
-        System.out.println("New circle center point: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
-        System.out.println("New circle radius: " + circle.getRadius());
-
+        Point inTest = new Point(5, 3);
+        Point onTest = new Point(3, 0);
+        Point corner = new Point(0, 0);
+        RightTriangle T1 = new RightTriangle(corner, 3, 4);
+        System.out.println("Area: " + T1.area());
+        System.out.println("Perimeter: " + T1.perimeter());
+        System.out.println("it is " + T1.isInside(inTest) + " that point 'inTest' is inside of T1");
+        System.out.println("it is " + T1.isOn(onTest) + " that point 'onTest' is on the perimeter of T1");
+        RightTriangle TranslatedT1 = T1.translate(7, 13);
+        System.out.println("if you translate T1 by (7,13), the coordinates of its corner will be: (" + TranslatedT1.corner.x + ", " + TranslatedT1.corner.y + ")");
+        RightTriangle ScaledT1 = T1.scale(2);
+        System.out.println("if you scale T1 up by 2 times, the first side length will be " + ScaledT1.sideLength1 + ", and its second side length will be " + ScaledT1.sideLength2);
+        RightTriangle T2 = new RightTriangle(corner, 6, 8);
+        System.out.println("it is " + RightTriangle.similar(T1, T2) + " that T1 is similar to T2");
+        RightTriangle T3 = new RightTriangle(corner, 10, 15);
+        System.out.println("it is " + RightTriangle.similar(T2, T3) + " that T2 is similar to T3");
     }
 }
 
