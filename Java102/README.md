@@ -84,10 +84,32 @@ Test code for "Practice: returnAll"
         DVD DVD2 = new DVD("Movie 2", "4", 180);
         items[3] = DVD2;
         DVD2.isCheckedOut = true;
+        
         returnAll(items);
 
         System.out.println("it is " + book1.isCheckedOut + " that Book 1 is checked out");
         System.out.println("it is " + book2.isCheckedOut + " that Book 2 is checked out");
         System.out.println("it is " + DVD1.isCheckedOut + " that Movie 1 is checked out");
         System.out.println("it is " + DVD2.isCheckedOut + " that Movie 2 is checked out");
+```
+Test code for "Practice: availableItems" 
+```java
+LibraryItem[] items = new LibraryItem[4];
+        Book book1 = new Book("Book 1", "1", "Book Writer", 200);
+        items[0] = book1;
+        book1.isCheckedOut = false;
+        Book book2 = new Book("Book 2", "2", "Book Writer", 400);
+        items[1] = book2;
+        book2.isCheckedOut = false;
+        DVD DVD1 = new DVD("Movie 1", "3", 90);
+        items[2] = DVD1;
+        DVD1.isCheckedOut = true;
+        DVD DVD2 = new DVD("Movie 2", "4", 180);
+        items[3] = DVD2;
+        DVD2.isCheckedOut = false;
+
+        ArrayList<LibraryItem> availableItems = availableItems(items);
+     
+        System.out.println("the available items are: " + availableItems.toString());
+        //the output is a little messy but it still works fine
 ```
