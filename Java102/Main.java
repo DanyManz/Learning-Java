@@ -41,8 +41,15 @@ public class Main {
         }
         return scaled;
     }
+
+    //Practice: returnAll
+    public static void returnAll(LibraryItem[] items) {
+    for (LibraryItem item: items ) {
+        item.returnItem();
+    } 
+    }
+
     public static void main(String[] args) {
         
     }
 }
-
